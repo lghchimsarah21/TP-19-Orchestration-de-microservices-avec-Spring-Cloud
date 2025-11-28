@@ -1,0 +1,9 @@
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: client-route
+          uri: lb://CLIENT
+          predicates:
+            - Path=/client/**
